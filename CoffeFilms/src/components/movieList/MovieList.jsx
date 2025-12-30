@@ -9,7 +9,6 @@ import {
   isFavorite,
 } from "../../utils/favorites";
 
-// 🔥 FAKE MOVIES
 const fakeMovies = [
   {
     id: 1,
