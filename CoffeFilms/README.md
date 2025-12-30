@@ -1,16 +1,78 @@
-# React + Vite
+# 🎬 CoffeeFilms
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современное frontend-приложение для поиска и просмотра информации о фильмах и сериалах.  
+Проект разработан в рамках курсовой работы по дисциплине **Frontend Advanced**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Функциональность
 
-## React Compiler
+- 🔍 Поиск фильмов и сериалов
+- 🎞 Просмотр подробной информации о фильме
+- ⭐ Добавление фильмов в избранное
+- 🔐 Авторизация пользователя
+- 🚫 Защищённые маршруты (доступ только для авторизованных)
+- ✅ Валидация форм
+- 💾 Сохранение данных в LocalStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Используемые технологии
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- **React** (функциональные компоненты)
+- **React Router DOM** — маршрутизация
+- **React Hook Form** — работа с формами
+- **Zod** — схема и валидация данных
+- **Vite** — сборка проекта
+
+### Работа с данными
+- **Fetch API** — запросы к внешнему API
+- **LocalStorage** — хранение пользовательских данных
+
+### Code Quality
+- **ES6+**
+- **ESLint**
+- Модульная структура проекта
+- Принципы DRY, KISS
+
+---
+
+## 📂 Структура проекта
+
+src/
+├── app/ # Инициализация приложения
+├── auth/ # Логика авторизации
+├── components/ # Переиспользуемые компоненты
+├── router/ # Настройка маршрутизации
+├── schemas/ # Zod-схемы валидации
+├── services/ # Работа с API
+├── styles/ # Глобальные стили
+├── ui/ # UI-компоненты
+├── utils/ # Вспомогательные функции
+
+
+---
+
+## 🧩 Основные возможности реализации
+
+- Все компоненты реализованы как **функциональные**
+- Управление состоянием через **React Hooks**
+- Валидация форм с использованием **react-hook-form + zod**
+- Разделение логики на сервисы и утилиты
+- Защита маршрутов с помощью `ProtectedRoute`
+- Обработка состояний загрузки и ошибок
+
+---
+
+## ⚙️ Установка и запуск проекта
+
+1. Клонировать репозиторий:
+```bash
+git clone https://github.com/your-username/coffeefilms.git
+
+npm install
+
+npm run dev
+
+npm run build
