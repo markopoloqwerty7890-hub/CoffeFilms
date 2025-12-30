@@ -10,7 +10,7 @@ const fakeMovies = [
     id: 1,
     title: "Venom",
     overview: "A team of explorers travel through a wormhole in space.",
-    poster_path: "/public/img/Без названия.jpg",
+    poster_path: "/src/img/Venom.jpg",
     vote_average: 8.6,
     release_date: "2014-11-07"
   },
@@ -18,7 +18,7 @@ const fakeMovies = [
     id: 2,
     title: "Inception",
     overview: "A thief who steals secrets through dream-sharing.",
-    poster_path: "/public/img/Inception.jpg",
+    poster_path: "/src/img/Inception.jpg",
     vote_average: 8.8,
     release_date: "2010-07-16"
   },
@@ -26,7 +26,7 @@ const fakeMovies = [
       id: 3,
       title: "TheDarkKnight",
       overview: "Batman faces the Joker in Gotham City.",
-      poster_path: "/public/img/The Dark Knight.jpg",
+      poster_path: "/src/img/TheDarkKnight.jpg",
       vote_average: 9.0,
       release_date: "2010-07-16"
     }
