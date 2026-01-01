@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import SearchBar from "../searchBar/SearchBar";
 import Loader from "../../components/loader/Loader";
 import { useMovies } from "../../hooks/useMovies";
+import SearchForm from "../searchForm/SearchForm";
+
 
 import {
   addToFavorites,
@@ -15,7 +16,8 @@ const MovieList = () => {
 
   return (
     <div className="p-6">
-      <SearchBar onSearch={search} />
+      <SearchForm onSubmit={search} />
+
 
       {loading && <Loader />}
       {error && <p className="text-red-500">{error}</p>}
