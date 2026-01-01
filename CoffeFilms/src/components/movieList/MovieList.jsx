@@ -13,7 +13,7 @@ const fakeMovies = [
   {
     id: 1,
     title: "Venom",
-    poster_path: "/public/img/Venom.jpg",
+    poster_path: "/src/assets/img/Venom.jpg",
   },
   {
     id: 2,
