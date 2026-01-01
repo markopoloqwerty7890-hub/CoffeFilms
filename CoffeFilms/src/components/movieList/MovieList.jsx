@@ -13,17 +13,17 @@ const fakeMovies = [
   {
     id: 1,
     title: "Venom",
-    poster_path: "/src/img/Venom.jpg",
+    poster_path: "/public/img/Venom.jpg",
   },
   {
     id: 2,
     title: "Inception",
-    poster_path: "/src/img/Inception.jpg",
+    poster_path: "/public/img/Inception.jpg",
   },
   {
     id: 3,
-    title: "The Dark Knight",
-    poster_path: "/src/img/TheDarkKnight.jpg",
+    title: " dark-knight",
+    poster_path: "/public/img/dark-knight.jpg",
   },
 ];
 
