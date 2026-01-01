@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
 import Loader from "../loader/Loader";
+import VenomImg from "../../assets/img/Venom.jpg"
+import InceptionImg from "../../assets/img/Inception.jpg"
+import darkKnightImg from "../../assets/img/dark-knight.jpg"
 
 import {
   addToFavorites,
@@ -13,17 +16,17 @@ const fakeMovies = [
   {
     id: 1,
     title: "Venom",
-    poster_path: "/src/assets/img/Venom.jpg",
+    poster_path: VenomImg,
   },
   {
     id: 2,
     title: "Inception",
-    poster_path: "/public/img/Inception.jpg",
+    poster_path: InceptionImg,
   },
   {
     id: 3,
     title: " dark-knight",
-    poster_path: "/public/img/dark-knight.jpg",
+    poster_path: darkKnightImg,
   },
 ];
 

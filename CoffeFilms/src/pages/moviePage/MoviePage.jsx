@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { getMovieTrailer } from "../../services/tmdb.service";
 import Loader from "../../components/loader/Loader";
 import ErrorMessage from "../../ui/ErrorMessage";
+import VenomImg from "../../assets/img/Venom.jpg"
+import InceptionImg from "../../assets/img/Inception.jpg"
+import darkKnightImg from "../../assets/img/dark-knight.jpg"
+
 
 // ФЕЙКОВЫЕ ФИЛЬМЫ
 const fakeMovies = [
@@ -10,7 +14,7 @@ const fakeMovies = [
     id: 1,
     title: "Venom",
     overview: "A team of explorers travel through a wormhole in space.",
-    poster_path: "/public/img/Venom.jpg",
+    poster_path: VenomImg,
     vote_average: 8.6,
     release_date: "2014-11-07"
   },
@@ -18,7 +22,7 @@ const fakeMovies = [
     id: 2,
     title: "Inception",
     overview: "A thief who steals secrets through dream-sharing.",
-    poster_path: "/public/img/Inception.jpg",
+    poster_path: InceptionImg,
     vote_average: 8.8,
     release_date: "2010-07-16"
   },
@@ -26,7 +30,7 @@ const fakeMovies = [
       id: 3,
       title: "dark-knight.jpg",
       overview: "Batman faces the Joker in Gotham City.",
-      poster_path: "/public/img/dark-knight.jpg",
+      poster_path: darkKnightImg,
       vote_average: 9.0,
       release_date: "2010-07-16"
     }
