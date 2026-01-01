@@ -1,49 +1,28 @@
-const fakeMovies = {
-  results: [
-    {
-      id: 1,
-      title: "Venom",
-      overview: "A team of explorers travel through a wormhole in space.",
-      poster_path: "/public/img/Без названия.jpg",
-      vote_average: 8.6
-    },
-    {
-      id: 2,
-      title: "Inception",
-      overview: "A thief who steals corporate secrets through dream-sharing.",
-      poster_path: "/public/img/Inception.jpg",
-      vote_average: 8.8
-    },
-    {
-      id: 3,
-      title: "TheDarkKnight",
-      overview: "Batman faces the Joker in Gotham City.",
-      poster_path: "/public/img/The Dark Knight.jpg",
-      vote_average: 9.0
-    }
-  ]
-};
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const BASE_URL = "https://api.themoviedb.org/3";
 
-export const getPopularMovies = async () => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(fakeMovies), 500);
-  });
+export const getDiscoverMovies = async () => {
+  const res = await fetch(
+    `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=ru-RU&page=1`
+  );
+
+  if (!res.ok) {
+    throw new Error("Ошибка загрузки фильмов");
+  }
+
+  const data = await res.json();
+  return data.results;
 };
 
 export const searchMovies = async (query) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        results: fakeMovies.results.filter(movie =>
-          movie.title.toLowerCase().includes(query.toLowerCase())
-        )
-      });
-    }, 300);
-  });
-};
+  const res = await fetch(
+    `${BASE_URL}/search/movie?api_key=${API_KEY}&language=ru-RU&query=${query}`
+  );
 
-export const getMovieTrailer = async () => {
-  return {
-    key: "dQw4w9WgXcQ" // fake YouTube трейлер
-  };
+  if (!res.ok) {
+    throw new Error("Ошибка поиска");
+  }
+
+  const data = await res.json();
+  return data.results;
 };
